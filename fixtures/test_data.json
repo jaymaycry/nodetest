@@ -1,0 +1,56 @@
+[
+    {
+        "model":"Deal",
+        "data":{
+            "id":122,
+            "name": "Investment One",
+            "target_return": 10.00,
+            "minimum_investment_amount": 1000.00
+        }
+    },
+    {
+        "model":"Deal",
+        "data":{
+            "id":123,
+            "name": "Investment Two",
+            "target_return": 23.00,
+            "minimum_investment_amount": 100.00
+        }
+    },
+    {
+        "model":"Deal",
+        "data":{
+            "id":124,
+            "name": "Investment Three",
+            "target_return": 3.00,
+            "minimum_investment_amount": 10000.00
+        }
+    },
+    {
+        "model":"Investor",
+        "data": {
+            "id": 20,
+            "family_name": "Spencer",
+            "given_name": "Shawn",
+            "nationality": "US"
+        }
+    },
+    {
+        "model":"Investor",
+        "data": {
+            "id": 23,
+            "family_name": "Wayne",
+            "given_name": "Bruce",
+            "nationality": "US"
+        }
+    },
+    {
+        "model":"Investor",
+        "data": {
+            "id": 23,
+            "family_name": "Bauer",
+            "given_name": "Jack",
+            "nationality": "US"
+        }
+    }
+]
