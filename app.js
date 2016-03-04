@@ -53,29 +53,19 @@ investorResource.use(investorMiddleware)
 db
   .sequelize
   .sync()
-  .complete(function(err) {
-    if (err) {
-      throw err
-    } else {
-      
-      
-        //fixtures
-        /*var sequelize_fixtures = require('sequelize-fixtures'),
-                models = {
-                    Deal: require('./models/Deal'),
-                    Investor: require('./models/Investor')
-                }
-        console.log("load test data.")
-        sequelize_fixtures.loadFile('fixtures/test_data.json', models).then(function(){
-                //doStuffAfterLoad();
-                console.log('test data loaded.')
-        })*/
-      
-      
-      
-      
-      http.createServer(app).listen(app.get('port'), function() {
-        console.log('Express server listening on port ' + app.get('port'))
-      })
+  .then(function () {
+    //fixtures
+    if ('development' === app.get('env')) {
+        var sequelize_fixtures = require('sequelize-fixtures'),
+        models = {
+            Deal: db.Deal,
+            Investor: db.Investor
+        }
+        sequelize_fixtures.loadFile('./fixtures/test_data.json', models).then(function(){
+            console.log('test data loaded.')
+        })
     }
+    http.createServer(app).listen(app.get('port'), function() {
+        console.log('Express server listening on port ' + app.get('port'))
+    })
   })

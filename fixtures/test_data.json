@@ -32,25 +32,27 @@
             "id": 20,
             "family_name": "Spencer",
             "given_name": "Shawn",
-            "nationality": "US"
+            "nationality": "USA",
+            "deals": [122,123]
         }
     },
     {
         "model":"Investor",
         "data": {
-            "id": 23,
+            "id": 21,
             "family_name": "Wayne",
             "given_name": "Bruce",
-            "nationality": "US"
+            "nationality": "USA",
+            "deals": [122,124]
         }
     },
     {
         "model":"Investor",
         "data": {
-            "id": 23,
+            "id": 22,
             "family_name": "Bauer",
             "given_name": "Jack",
-            "nationality": "US"
+            "nationality": "USA"
         }
     }
 ]

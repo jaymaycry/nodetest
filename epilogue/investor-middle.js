@@ -23,7 +23,7 @@ module.exports = {
         write: {
             before: function(req, res, context) {
                 var nationality = req.body.nationality
-                if (lookup.countries({alpha3: nationality}).length != 0) {
+                if (!nationality || lookup.countries({alpha3: nationality}).length != 0) {
                     return context.continue;
                 }
                 return context.error(422, "investors nationality has to be correct."); 
