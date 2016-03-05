@@ -4,7 +4,7 @@ module.exports = {
             after: function(req, res, context) {
                 var investors = req.body.investors;
                 if (investors) {
-                    context.instance.addInvestors(investors);
+                    context.instance.setInvestors(investors);
                 }
                 return context.continue;
             }
